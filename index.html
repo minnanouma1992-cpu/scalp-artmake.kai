@@ -154,6 +154,13 @@ nav.site a:hover{color:var(--color-main);}
 .compare .body h4{font-size:16px;color:var(--color-main);margin:12px 0 6px;}
 .compare .body ol{padding-left:20px;}
 .compare .col-b{border-left:1px solid var(--color-line);}
+/* 手打ち（当院の技法）を強調 */
+.compare .recommend{background:#fcf6ea;}
+.compare .head.recommend{background:#6e5739;}
+.compare .head .badge{display:inline-block;background:#fff;color:#6e5739;font-family:var(--font-sans);font-size:14px;font-weight:700;border-radius:20px;padding:3px 14px;margin-left:12px;vertical-align:middle;}
+.compare .body.recommend{font-weight:500;}
+.compare .body.recommend h4{color:#6e5739;}
+@media(max-width:600px){.compare .head .badge{display:block;margin:8px auto 0;width:max-content;}}
 @media(max-width:600px){.compare{grid-template-columns:1fr;}.compare .col-b{border-left:none;border-top:1px solid var(--color-line);}}
 
 /* ============================================================
@@ -343,8 +350,8 @@ footer.site p{font-size:15px;opacity:.85;}
     <div class="section-label">DIFFERENCE</div>
     <h2 class="section-title">アートメイクとタトゥーの違い</h2>
     <div class="cols reverse">
-      <!-- ▼ 写真を差し替え -->
-      <div class="ph">比較イメージ写真をここに差し替え</div>
+      <!-- ▼ 画像：頭皮の横断面イメージ（GitHubに scalp-cross-section.png をアップロードすると表示されます） -->
+      <img src="scalp-cross-section.png" alt="頭皮の横断面イメージ。色素は表皮の浅い層まで、毛根には触れません。" style="border-radius:6px;border:1px solid var(--color-line);width:100%;">
       <div>
         <p>頭皮アートメイクは、毛根に近い自然な再現を可能にします。刺青やタトゥーとは異なり表皮に着色するため、時間とともに薄くなり、デザイン変更も可能です。</p>
         <p>持続期間は約2〜3年。肌質・体質・性別・ライフスタイルにより個人差があります。定期的なメンテナンスで色素の褪色をカモフラージュしていきます。</p>
@@ -386,24 +393,12 @@ footer.site p{font-size:15px;opacity:.85;}
     <p class="lead">電動機械は短時間で行えますが、毛根配列や深さの調整が難しい特徴があります。時間はかかりますが、長く色素が持ち、カスタマイズされた毛根配列を可能にする手作業の技法を推奨しています。</p>
 
     <div class="compare">
-      <div class="head col-a">電動式機械による施術</div>
-      <div class="head col-b">手打ちによる施術</div>
+      <!-- 左：手打ち（当院の技法・強調） -->
+      <div class="head col-a recommend">手打ちによる施術<span class="badge">当院の技法</span></div>
+      <!-- 右：電動式 -->
+      <div class="head col-b">電動式機械による施術</div>
 
-      <div class="body col-a">
-        <h4>メリット</h4>
-        <ol>
-          <li>施術時間が早く安価。</li>
-          <li>経験の浅い施術者でも扱いやすい。</li>
-        </ol>
-        <h4>デメリット</h4>
-        <ol>
-          <li>髪に機械が引っかかりやすく抜け毛の原因に。</li>
-          <li>毛根の上にドットが重なる場合がある。</li>
-          <li>浅い層に固定されるため色素の定着が悪い。</li>
-        </ol>
-      </div>
-
-      <div class="body col-b">
+      <div class="body col-a recommend">
         <h4>メリット</h4>
         <ol>
           <li>1つ1つ手作業でドットを描く。</li>
@@ -415,6 +410,20 @@ footer.site p{font-size:15px;opacity:.85;}
           <li>施術時間が長く高価。</li>
           <li>技術習得に時間とトレーニングを要する。</li>
           <li>仕上がりがアーティストの力量に依存する。</li>
+        </ol>
+      </div>
+
+      <div class="body col-b">
+        <h4>メリット</h4>
+        <ol>
+          <li>施術時間が早く安価。</li>
+          <li>経験の浅い施術者でも扱いやすい。</li>
+        </ol>
+        <h4>デメリット</h4>
+        <ol>
+          <li>髪に機械が引っかかりやすく抜け毛の原因に。</li>
+          <li>毛根の上にドットが重なる場合がある。</li>
+          <li>浅い層に固定されるため色素の定着が悪い。</li>
         </ol>
       </div>
     </div>
@@ -447,13 +456,13 @@ footer.site p{font-size:15px;opacity:.85;}
 </section>
 
 <!-- ============================================================
-     CTA帯（公式LINE・電子書籍）
+     CTA帯（公式LINE）
      ============================================================ -->
 <section class="cta-band" id="contact">
-  <h3>公式LINE登録で電子書籍をプレゼント</h3>
-  <p>より詳細な内容をまとめた電子書籍を、公式LINEにて無料プレゼント中。</p>
-  <p>多くの症例写真やお客様の声を掲載しております。</p>
-  <a href="https://lin.ee/WbvOmFC" class="btn line" target="_blank" rel="noopener" style="margin-top:20px;">公式LINEを追加する</a>
+  <h3>まずは公式LINEでご相談ください</h3>
+  <p>施術の適応可否やお見積もりは、公式LINEから無料でご相談いただけます。</p>
+  <p>症例やお客様の声もご案内しております。</p>
+  <a href="https://lin.ee/WbvOmFC" class="btn line" target="_blank" rel="noopener" style="margin-top:20px;">公式LINEで無料相談する</a>
 </section>
 
 <!-- ============================================================

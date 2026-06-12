@@ -164,6 +164,15 @@ nav.site a:hover{color:var(--color-main);}
 @media(max-width:600px){.compare{grid-template-columns:1fr;}.compare .col-b{border-left:none;border-top:1px solid var(--color-line);}}
 
 /* ============================================================
+   症例（Before / After）
+   ============================================================ */
+.case-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;margin-top:32px;}
+.case-card{background:#fff;border:1px solid var(--color-line);border-radius:10px;overflow:hidden;margin:0;}
+.case-card img{width:100%;display:block;}
+.case-card figcaption{padding:16px;font-size:16px;color:#555;text-align:center;}
+.case-note{font-size:14px;color:#888;margin-top:24px;line-height:1.9;}
+
+/* ============================================================
    料金表
    ============================================================ */
 .price-table{width:100%;border-collapse:collapse;margin-top:20px;font-size:18px;}
@@ -270,6 +279,7 @@ footer.site p{font-size:15px;opacity:.85;}
     <nav class="site">
       <a href="#about">施術について</a>
       <a href="#artist">アーティスト</a>
+      <a href="#case">症例</a>
       <a href="#price">料金</a>
       <a href="#flow">施術の流れ</a>
       <a href="#column">コラム</a>
@@ -427,6 +437,33 @@ footer.site p{font-size:15px;opacity:.85;}
         </ol>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     症例（Before / After）
+     ▼ 画像を差し替えるときは <img src="..."> のファイル名を変更
+     ============================================================ -->
+<section id="case" class="soft">
+  <div class="wrap">
+    <div class="section-label">CASE</div>
+    <h2 class="section-title">症例イメージ（Before / After）</h2>
+    <p class="lead">手打ち式頭皮アートメイクによる変化のイメージです。仕上がりや必要回数には個人差があります。</p>
+
+    <div class="case-list">
+      <!-- 症例1 -->
+      <figure class="case-card">
+        <img src="case-1.png" alt="頭頂部・分け目の症例イメージ（Before / After）">
+        <figcaption>頭頂部・分け目／施術前〜3回目のイメージ</figcaption>
+      </figure>
+      <!-- 症例2 -->
+      <figure class="case-card">
+        <img src="case-2.png" alt="頭頂部の症例イメージ（Before / After）">
+        <figcaption>頭頂部の地肌の透け感カバーのイメージ</figcaption>
+      </figure>
+    </div>
+
+    <p class="case-note">※掲載画像はイメージです。効果には個人差があり、効果を保証するものではありません。施術回数の目安は平均3回、施術間隔は約1ヶ月です。リスク・副作用、料金は各セクションをご確認ください。</p>
   </div>
 </section>
 
